@@ -1,0 +1,2 @@
+# playwright test automation
+ A scalable and maintainable Playwright test suite leveraging data-driven techniques to minimize code duplication and improve adaptability. Test scenarios are dynamically generated from a JSON object, enabling efficient test case management and seamless integration of new scenarios without repetitive coding. Ideal for teams looking to enhance test automation with a clean, modular structure.
