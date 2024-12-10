@@ -13,18 +13,17 @@ test.describe('Task Verification in Demo App', () => {
         const webAppButton = page.locator('button:has(h2:has-text("Web Application"))');
         await webAppButton.click();
 
-        // Step 3: Verify task "Implement user authentication" is in the "To Do" column
+        // Step 3: Verify "To Do" column has "Fix navigation bug"
         const todoColumn = page.locator('.flex.flex-col.w-80:has(h2:has-text("To Do"))');
-        const task = todoColumn.locator('h3:has-text("Implement user authentication")');
+        const task = todoColumn.locator('h3:has-text("Fix navigation bug")');
         await expect(task).toBeVisible();
 
-        // Step 4: Confirm tags: "Feature" and "High Priority"
+        // Step 4: Verify the tag "Bug"
         const tags = task.locator('..').locator('.flex.flex-wrap.gap-2 span');
-        await expect(tags.locator('text=Feature')).toBeVisible();
-        await expect(tags.locator('text=High Priority')).toBeVisible();
+        await expect(tags.locator('text=Bug')).toBeVisible();
 
         // Step 5: Additional verification for description
         const description = task.locator('..').locator('p');
-        await expect(description).toHaveText(/Add login and signup functionality/);
+        await expect(description).toHaveText(/Menu does not close on mobile/);
     });
 });
