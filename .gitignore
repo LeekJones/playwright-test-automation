@@ -1,4 +1,5 @@
 
+node_modules/
 node_modules/playwright/types/testReporter.d.ts
 node_modules/playwright/types/test.d.ts
 node_modules/playwright/ThirdPartyNotices.txt
