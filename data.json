@@ -1,4 +1,7 @@
 {
+    "app": {
+        "url": "https://animated-gingersnap-8cf7f2.netlify.app/"
+    },
     "login": {
         "username": "admin",
         "password": "password123"
