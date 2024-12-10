@@ -46,6 +46,7 @@ async function verifyTaskDetails(page, columnName, taskName, expectedTags, testC
 
 test.describe('Task Verification in Demo App (With Trace Viewer)', () => {
     test.beforeEach(async ({ page }, testInfo) => {
+        await page.setViewportSize({ width: 1920, height: 1080 });
         await login(page, testInfo.title.match(/\d+/)[0]); // Pass test case number dynamically
     });
 
